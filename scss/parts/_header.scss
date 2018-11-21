@@ -1,0 +1,96 @@
+header {
+  background: $layouts-bg;
+  padding: 1.25rem 0;
+  box-shadow: 0 3px 80px 0 rgba(23, 24, 32, 0.2);
+  position: relative;
+  z-index: 1;
+  .btn {
+    @include button-size(0, 0, 1.125rem, 3rem, 3.125rem);
+    @include hover {
+      text-decoration: $link-decoration;
+    }
+    &:focus,
+    &.focus {
+      text-decoration: $link-decoration;
+    }
+  }
+  a:hover {
+    text-decoration: $link-decoration;
+  }
+}
+
+.btn.add {
+  width: 8.3125rem;
+  color: #fff;
+  i {
+    margin-left: 1.6875rem;
+  }
+  &:hover {
+    i {
+      filter: brightness(0.15);
+    }
+  }
+}
+
+.search-bar {
+  padding-right: 3.5rem;
+}
+
+.notifications-bar {
+  .icon-bell {
+    position: relative;
+  }
+  .notification {
+    background: $primary;
+    border-radius: 100%;
+    height: 0.75rem;
+    width: 0.75rem;
+    position: absolute;
+    top: 0;
+    right: 0.125rem;
+    border: none;
+  }
+
+}
+
+.navbar-nav {
+  @include media-breakpoint-down(sm) {
+    margin: 2.0625rem 0;
+  }
+  li:not(:last-child) {
+    margin-right: 3rem;
+    @include media-breakpoint-down(sm) {
+      margin: 0 0 1rem 0;
+      padding-bottom: 0.625rem;
+      border-bottom: 1px dashed #fff;
+    }
+  }
+  .dropdown-menu {
+    left: -80px;
+    li:not(:last-child) {
+     margin-bottom: 0.625rem;
+    }
+  }
+  .photo {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.dropdown-toggle:after {
+  background: url('../img/icons/icon-down.png');
+  width: 0.875rem;
+  height: 0.5rem;
+  border: none;
+  vertical-align: middle;
+  margin-left: 0.75rem;
+}
+
+

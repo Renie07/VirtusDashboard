@@ -1,0 +1,55 @@
+@import 'fonts/fonts';
+@import 'mixins';
+@import 'variables';
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/buttons';
+
+@import 'parts/icons';
+@import 'parts/header';
+@import 'parts/sidebar';
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.main-content {
+  padding: 2.5rem 1.5rem 1.25rem 9.75rem;
+  @include media-breakpoint-down(sm) {
+    padding: 2.5rem $grid-gutter-width/2;
+  }
+}
+
+
+
+
